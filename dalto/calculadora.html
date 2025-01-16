@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+
+    <a href="../introduccion/poo/class/prueba.html"> vuelve al inicio</a>
+ <center>
+    <h1 style="color: red">
+        Calculadora
+     </h1>
+ </center>
+        
+   
+    <script>
+        
+        function operaciones(){
+        
+            var x = parseInt(prompt("Primer número:"))
+            var y = parseInt(prompt("Segundo número:"))
+            return {x: x, y :y}
+        }
+
+            var resultado = parseInt(prompt("Que operación deseas hacer: 1: Suma 2: Resta 3: Multiplicación 4: División 5: Raiz Cuadrado 6: Potenci"));
+            
+            switch(resultado){
+                case 1 :
+                    var {x, y } =operaciones();
+                    document.write("Se realizo la suma: " +(x + y));
+                    break;
+                
+                    case 2 :
+                    var {x, y } =operaciones();
+                    document.write("Se realizo la Resta:" +(x - y));
+                    break;    
+
+                    case 3 :
+                    var {x, y } =operaciones();
+                    document.write("La multiplicación es:" +(x * y));
+                    break;
+
+                    case 4 :
+                    var {x, y } =operaciones();
+                    document.write("La división es:" +(x / y));
+                    break;
+
+                    case 5 :
+                    var x = parseInt(prompt("Número para raiz cuadrada"));
+                    var resultadoRC = Math.sqrt(x)
+                    var raizCorta = resultadoRC.toFixed(2);
+                    document.write(`La raiz cuadrada de ${x} es de: ${raizCorta}`);
+                    break;
+
+                    case 6: 
+                    var x = parseInt(prompt("Número de base"));
+                    var y = parseInt(prompt("Número para potencia"));
+                    let r = Math.pow (x,y);
+                    var potCorta = y.toFixed(2);
+                    document.write(`La base es de ${x} La potencia ${y} <br> El resultado: ${potCorta}`);
+                    break; 
+                    default: 
+
+                    
+                    document.write("No es valido lo ingresado");
+                    break;
+            }
+
+
+       
+ 
+
+    </script>
+</body>
+</html>
