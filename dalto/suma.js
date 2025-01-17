@@ -5,7 +5,7 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-rl.question('Primer número: ', (x) => {
+rl.question('Hola Angel: ', (x) => {
     rl.question('Segundo número: ', (y) => {
         const numX = Number(x);
         const numY = Number(y);
@@ -13,7 +13,7 @@ rl.question('Primer número: ', (x) => {
         if (isNaN(numX) || isNaN(numY)) {
             console.log('Por favor, ingresa valores numéricos.');
         } else {
-            console.log(`El resultado es: ${numX + numY}`);
+            console.log(`El resultado es: ${numX * numY}`);
         }
 
         rl.close();
