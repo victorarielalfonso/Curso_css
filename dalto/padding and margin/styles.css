@@ -1,0 +1,27 @@
+.formulario {
+    background: red;
+    padding: 50px 50px 100px 50%;
+  /*  padding-top: 10%;
+    padding-bottom: 10%;
+    padding-left: 10%;
+    padding-right: 10%; */
+}
+
+.formulario_inpt {
+    padding: 5px 10px;
+    width: 50%;
+    margin: 1px;
+}
+.formulario_submit {
+    background-color: black;
+    color: aliceblue;
+    letter-spacing: 2px;
+    padding: 5px 1px 5px 1px;
+        width: 50%;
+}
+body {
+    background-image: url('G0017077.JPG'); /* Coloca la ruta de tu imagen aquí */
+    background-size: cover; /* Esto hace que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; 
+}
