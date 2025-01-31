@@ -12,12 +12,12 @@
 
     <a href="../introduccion/poo/class/prueba.html"> vuelve al inicio</a>
  <center>
-    <h1 style="color: black;background-color: aqua;">
+    <h1 >
         Calculadora
      </h1>
  </center>
         
-   
+   <div id="resultado"></div>
     <script>
         
         function operaciones(){
@@ -26,13 +26,12 @@
             var y = parseInt(prompt("Segundo número:"))
             return {x: x, y :y}
         }
-
             var resultado = parseInt(prompt("Que operación deseas hacer: 1: Suma 2: Resta 3: Multiplicación 4: División 5: Raiz Cuadrado 6: Potenci"));
             
             switch(resultado){
                 case 1 :
                     var {x, y } =operaciones();
-                    document.write("Se realizo la suma: " +(x + y));
+                    document.getElementById("resultado").innerHTML ="Se realizo la suma: " +(x + y);
                     break;
                 
                     case 2 :
