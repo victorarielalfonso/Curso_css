@@ -1,0 +1,19 @@
+div {
+ 
+    background-color: red;
+    color: blue;
+    width: 200px;
+    padding: 25px;
+    margin: auto;
+    text-align: center;
+    border: 5px solid black;
+    margin: 10px;
+   
+    
+}
+.box2{
+    padding: 100;
+    box-sizing: border-box;
+    border: 10px solid black;
+    box-sizing: border-box;
+}

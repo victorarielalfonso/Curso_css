@@ -1,0 +1,14 @@
+.inicio {
+    background-color: green;
+    color: aliceblue;
+    border-radius: 100%;
+    border-color: black;
+    border-width: 2px;
+    color: black;
+    border-style: solid
+}
+
+body{
+    background-color: bisque;
+    ;
+}

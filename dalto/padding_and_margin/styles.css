@@ -1,17 +1,23 @@
-.formulario {
+ .formulario {
     background: red;
     padding: 0px 50px 100px 42%;
   /*  padding-top: 10%;
     padding-bottom: 10%;
     padding-left: 10%;
     padding-right: 10%; */
-}
+    box-sizing: border-box;
+    margin: auto;
+    
+}  
+
+
 
 .formulario_inpt {
     padding: 5px 10px;
     width: 50%;
     margin: 1px;
     border-width: 3px;
+    
     border-color: black;
     border-style: solid
     
@@ -26,9 +32,8 @@
     border-color: white;
     border-style: solid;
     border-radius: 100px;
-    
-        
 }
+
 body {
     background-image: url('G0017077.JPG'); /* Coloca la ruta de tu imagen aquí */
     background-size: cover; /* Esto hace que la imagen cubra toda la pantalla */
@@ -39,14 +44,24 @@ body {
     border-color: white;
     border-style: solid;
 }
-.portada{
+/*.portada{
     color: white;
     background: black;
     padding: 0px 5px 10px 50%;
     display: flex;              /* Usamos Flexbox para centrar */
     /*justify-content: center;    /* Centra horizontalmente */
-    align-items: center;        /* Centra verticalmente */
-    border-bottom: 2px solid white;
+   /* align-items: center;        /* Centra verticalmente */
+   /* border-bottom: 2px solid white;  
     
+/* } */
+.portada {
+    color: white;
+    background: black;
+    padding: 10px 20px;  /* Margen interno más manejable */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+    border-bottom: 2px solid white;
+    text-align: center; /* Centra el texto dentro del div */
 }
 
