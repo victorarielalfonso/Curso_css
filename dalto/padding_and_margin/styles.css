@@ -7,6 +7,7 @@
     padding-right: 10%; */
     box-sizing: border-box;
     margin: auto;
+    margin-top: 250px 200px 200px;
     
 }  
 
@@ -39,6 +40,9 @@ body {
     background-size: cover; /* Esto hace que la imagen cubra toda la pantalla */
     background-position: center; /* Centra la imagen */
     background-attachment: fixed; 
+    margin-top: 260px;
+    margin-left: 40%;
+    
 
     border-width: 2;
     border-color: white;
@@ -63,5 +67,6 @@ body {
     align-items: center;     /* Centra verticalmente */
     border-bottom: 2px solid white;
     text-align: center; /* Centra el texto dentro del div */
+    
 }
 

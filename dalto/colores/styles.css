@@ -1,19 +1,28 @@
 div {
  
-    background-color: red;
-    color: blue;
+    background: #0c9;
     width: 200px;
-    padding: 25px;
-    margin: auto;
-    text-align: center;
-    border: 5px solid black;
+    height: 200px;
     margin: 10px;
+    border-radius: 52cm;
    
     
 }
+.box1{
+    box-sizing: border-box;
+     border: 5px solid black;
+    padding: 30px;
+    width: 200px;
+    height: 200px;
+    
+}
 .box2{
-    padding: 100;
     box-sizing: border-box;
     border: 10px solid black;
-    box-sizing: border-box;
+    padding: 30px;
+    width: 200px;
+    height: 200px;
+}
+body{
+    background-color: #29a;
 }

@@ -1,0 +1,38 @@
+div{
+    background: #ededed;
+    padding: 4cm 5cm;
+    font-family: sans-serif;
+    border-left: 5px  solid  #999;
+    border-radius: 100cm;
+    border-right: 5px solid #999;
+    width: 40%;
+    margin-top: 250px ;
+   
+    
+    
+}
+
+h1{
+    margin: 0;
+    width: 40%;
+    text-align: center;
+}
+span{
+    color: #999;
+    font-size: 16px;
+    font-weight: 100;
+}
+p{
+    color: #555;
+    width: 40%;
+    
+}
+
+body {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 70vh; /* Ocupa toda la altura de la ventana */
+    margin: 0;
+    background-color: aqua; /* Opcional, para ver mejor el centrado */
+}

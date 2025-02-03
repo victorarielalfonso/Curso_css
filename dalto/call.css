@@ -16,6 +16,7 @@ script{
     color: aliceblue;
 }
 #resultado {
+    /*transform: translateX(50); */
     color: yellowgreen;
     background-color: black;
     padding: 20px;
@@ -26,4 +27,23 @@ script{
     width: 50%;
     border-radius: 10%;
     margin: 20px auto;
+}
+.boton{
+    display: block;
+    position: fixed;
+    bottom: 600px; /* 20px desde el fondo */
+    left: 50%; /* Centrado horizontal */
+    transform: translateX(-50%);
+    
+
+
+    padding: 10px 20px;
+    background-color: black;
+    color: yellowgreen; /* Texto en blanco */
+    text-decoration: none; /* Quitar subrayado */
+    border-radius: 50px; /* Bordes redondeados */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: 3px solid yellowgreen;
 }
