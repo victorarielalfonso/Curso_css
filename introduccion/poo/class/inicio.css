@@ -12,3 +12,19 @@ body{
     background-color: bisque;
     ;
 }
+.xx{
+    color: black;
+    bottom: 600px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
+}
+
+
+.boton{
+    display: block;
+    position: center;
+    bottom: 600px; /* 20px desde el fondo */
+    left: 50%; /* Centrado horizontal */
+    transform: translateX(-50%);
+}
