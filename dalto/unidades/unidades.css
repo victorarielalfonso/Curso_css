@@ -10,12 +10,15 @@
     background-color: #dad6ff;
     background-image: url("arbol.jpg");
     background-size: cover ;
-    background-position: 10px 0px 5px 10px ;
+    background-position: 0px 0px 8px 1px ;
     background-repeat: no-repeat;
 
+    box-shadow: 1px 1px 65px #af4;
     height: 300px;
     overflow: auto;
     overflow-x: hidden;
+    margin-left: 20px;
+
 }
 
 .contenido::-webkit-scrollbar {
@@ -26,22 +29,25 @@
     position: absolute;
     top: 15px; /* Ajusta la posición en la parte superior */
     left: 50%;
-    background-color: #0004;
+    background-color: rgba(139, 211, 97, 0.5);
     transform: translateX(-40%);
     font-size: 18px;
     font-weight: bold;
-    color: #333;
+    color: #000;
     width: 25%;
     text-align: center;
     padding: 5px;
     border-radius: 100cm;
     margin-top: 5%;
+    box-shadow: -5px 5px 50px #fff;
+    
 }
 
 h1 {
     margin: 0;
     width: 150%;
     padding: 20px;
+    
 }
 
 span {
@@ -53,6 +59,7 @@ span {
 .p1 {
     color: #555;
     width: 40%;
+    text-shadow: 0 0 40px #af4;
 }
 
 body {
@@ -61,5 +68,5 @@ body {
     align-items: center; /* Centra verticalmente */
     height: 70vh; /* Ocupa toda la altura de la ventana */
     margin: 0;
-    background-color: #0ef; /* Opcional, para ver mejor el centrado */
+    background-color: #000; /* Opcional, para ver mejor el centrado */
 }
