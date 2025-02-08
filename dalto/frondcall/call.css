@@ -59,9 +59,11 @@
     height: 238px;
     margin: 9px 10px 20px 10px;
     border-radius: 10%;
+    
 }
 
 .resul{
+   
     border: 2px  solid #fff;
     width: 290px;
     height: 130px;
