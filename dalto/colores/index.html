@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>colores</title>
-    <link rel='stylesheet' href='styles.css'>
-    <script src='main.js'></script>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
 </head>
+
 <body>
-    <div class="box1">hola</div>
-    <div class="box2">chau</div>
+
+    <form method="post" action="procesar.php" onsubmit="validar();" id="formulario1">
+        Ingrese nombre:
+        <input type="text" id="usuario" name="usuario" size="20">
+        <br> Ingrese clave:
+        <input type="password" id="clave" name="clave" size="20">
+        <br>
+        <input type="submit" id="confirmar" name="confirmar" value="Confirmar">
+    </form>
+
+    <script>
+        function validar() {
+            let usu = document.getElementById("usuario").value;
+            let cla = document.getElementById("clave").value;
+            if (usu.length == 0 || cla.length == 0) {
+                alert('El nombre de usuario o clave está vacío');
+                return false;
+            } else
+                return true;
+        }
+    </script>
 
 </body>
-</html>
+</html

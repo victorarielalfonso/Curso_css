@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+    <script>
+        
+        let datos = [];
+
+function personas() {
+    let nombre = prompt("Ingrese el nombre:");
+    let dinero = parseInt(prompt("Ingrese el valor de dinero:"));
+    let nuevoDatos = { nombre: nombre, dinero: dinero };
+    datos.push(nuevoDatos);
+    document.write(`Nombre: ${nombre} Dinero: ${dinero}<br>`);
+}
+
+for (let i = 0; i < 2; i++) {
+    personas();
+}
+
+function result() {
+    for (let i = 0; i < datos.length; i++) {
+        if (datos[i].dinero >= 20) {
+            document.write(`${datos[i].nombre} puedes comprar una coca cola de 3L. `);
+            document.write("Tu vuelto seria de " + (datos[i].dinero - 20) + "<br>");
+        } else if (datos[i].dinero >= 14 && datos[i].dinero <= 19) {
+            document.write(`${datos[i].nombre} puedes comprar una coca cola de 1.5L `);
+            document.write("Tu vuelto seria de " + (datos[i].dinero - 14) + "<br>");
+        } else if (datos[i].dinero >= 9 && datos[i].dinero < 14) {
+            document.write(`${datos[i].nombre} puedes comprar una coca cola de 500ML `);
+            document.write("Tu vuelto seria de " + (datos[i].dinero - 9) + "<br>");
+        } else {
+            document.write(`${datos[i].nombre} no tienes la cantidad suficiente  <br>`);
+        }
+    }
+}
+
+result();
+
+    </script>
+
+</body>
+</html>
+    
