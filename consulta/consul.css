@@ -1,0 +1,106 @@
+body{
+    background-image: url(../dalto/textarea_labels/concrete-texture.png);
+    
+   
+}
+
+form{
+    background-color: wheat;
+    width: 80%;
+    border-radius: 10px;
+    max-width: 800px;
+    padding: 10px 10px 50px;
+    box-shadow: 0px 0px 25px #0009;
+
+    margin-top: 250px;
+    margin-left: 550px;
+   
+
+}
+.input input{
+    text-transform: uppercase; /* Convierte a mayuscula lo ingresado al input */
+    width: 100%; /* Hace que el input ocupe todo el ancho del contenedor */
+    height: 40px; /* Ajusta la altura del input */
+    font-size: 18px; /* Hace el texto dentro del input más grande */
+    padding: 10px; /* Agrega espacio interno para que no se vea apretado */
+    border: 2px solid #ccc; /* Añade un borde */
+    border-radius: 5px; /* Redondea un poco los bordes */
+    box-sizing: border-box; /* Evita que e */
+    margin: 3px
+    
+    
+    
+
+}
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    font-size: 50px;
+    position: relative; /* Necesario para que los elementos hijos se posicionen respecto al h2 */
+    pointer-events: none;
+}
+
+h2 .text {
+    position: relative;
+    z-index: 2; /* Hace que el texto esté por encima de la imagen */
+}
+
+h2 .background-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(logo.png);
+    background-repeat: no-repeat;
+    background-size: 250px 65px;
+    background-position: right;
+    opacity: 0.3; /* Aplica opacidad solo a la imagen */
+    z-index: 1; /* Asegura que la imagen esté por debajo del texto */
+}
+
+
+
+.butun {
+    display: flex; /* Usamos Flexbox para centrar los botones */
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 10px; /* Espacio entre los botones */
+    margin: 20px auto; /* Centra el contenedor de los botones */
+}
+
+.butun input {
+    width: 150px; /* Hace que los botones tengan un ancho mayor */
+    height: 50px; /* Aumenta la altura de los botones */
+    font-size: 20px; /* Hace el texto de los botones más grande */
+    padding: 10px; /* Espaciado interno */
+    border: 2px solid #ccc; /* Borde de los botones */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    background-color: #4CAF50; /* Fondo verde */
+    color: white; /* Texto blanco */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+    text-transform: uppercase;
+    
+}
+
+.resul {
+    color: white;
+    background-color: #bbccbc; /* Fondo verde */
+    border: 2px solid #000; /* Borde verde */
+    font-weight: bold;
+    pointer-events: none;
+}
+.resul::placeholder{
+    color: #000;
+    text-align: center; 
+    border-color: #000;
+}
+.butun input:active {
+    transform: scale(0.95); /* Hace que el botón se encoja un poco */
+    background-color: #388E3C; /* Cambia el color de fondo a un tono más oscuro */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); /* Agrega un efecto de sombra más fuerte */
+}
+#a{
+color: #000;
+text-align: center;
+}
