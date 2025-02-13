@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    color: #ddd;
+    background-color: #222;
+}
+form{
+    background-color: transparent;
+    padding: 20px ;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0px  0px 55px #fff2;
+    margin-top: 50px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+input{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px  8px;
+    border: 2px solid #222;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15 px #222;
+    color: #000;
+    margin: 1px;
+}
+fieldset{
+    margin: 20px;
+    border: 1px solid #ddd6;
+}
+legend{
+    border: 1px solid #ddd6;
+    background-color: #ddd6;
+    color: #000;
+
+}

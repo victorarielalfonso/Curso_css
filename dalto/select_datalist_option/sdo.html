@@ -10,29 +10,38 @@
 <body>
     <form>
         <h2>S D O</h2>
-        <div class="form_input">
-            <label for="nombre">Nombre
-            <input type="text" id="nombre" placeholder="Escribe tu nombre">
-        </label>
-        </div>
-        <div class="form_input">
-            <label for="email">Email
-            <input type="email" id="email" placeholder="Escribe tu correo">
-        </label>
-        <div class="form_input">
-            <select name="type-of-user">
-              <option value="user1">@hotmail.com</option>
-              <option>@gmail.com</option>
-              <option>@outlook.com</option>
-            </select>
-
-        </div>
-        </div>
-        <div class="form_input">
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" placeholder="Deja tu mensaje"></textarea>
-        </div>
+        <fieldset>
+            <div class="form_input">
+                <label for="nombre">Nombre
+                <input type="text" id="nombre" placeholder="Escribe tu nombre">
+            </label>
+            </div>
+            <div class="form_input">
+                <label for="email">Email
+                <input type="email" id="email" placeholder="Escribe tu correo">
+            </label>
+            <div class="form_input">
+                <select name="type-of-user">
+                  <option value="user1">@hotmail.com</option>
+                  <option>@gmail.com</option>
+                  <option>@outlook.com</option>
+                </select>
+    
+            </div>
+            </div>
+        </fieldset>
+        
+        
+            <fieldset>
+                <legend>Mensaje</legend>
+                <div class="form_input">
+                    <textarea id="mensaje" placeholder="Deja tu mensaje"></textarea>
+                </div>
+            </fieldset>
+           
        <!-- <button type="submit">Enviar</button> -->
+
+       
 
        <div class="form_input checkbox-container">
         <input type="checkbox" class="checkbox" id="terminos">
