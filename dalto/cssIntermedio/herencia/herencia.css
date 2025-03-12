@@ -1,0 +1,24 @@
+body{
+    color: blue;
+}
+div{
+    
+   
+}
+/*
+con el inherit hereda el color de padre
+en este caso toma del doby porque el div no tiene color
+h1{
+    color: inherit;
+}
+
+toma el valor del navegador
+h1{
+    color:initial;
+   
+}
+
+*/
+h1{
+    color: red;
+}

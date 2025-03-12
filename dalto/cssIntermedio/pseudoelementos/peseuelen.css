@@ -1,0 +1,16 @@
+div{
+    padding: 20px;
+}
+h1::first-letter{
+    color: red;
+    font-size: 3em;
+    letter-spacing: -8px;
+}
+*::selection{
+    background-color: red;
+    color: blue;
+}
+li::before{
+    color: red;
+    content: 'texto antes: ';
+}

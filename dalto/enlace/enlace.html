@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlace</title>
+    <link rel="stylesheet" href="enlace.css">
+</head>
+<body>
+    <form>
+        <h2>Formulario de contacto</h2>
+        <fieldset>
+            <legend>Informacion Basica</legend>
+        <div class="form_input">
+            <label>Nombre Completo
+            <input type="text" placeholder="Usuario" id="nombre">
+        </label>
+        </div>
+        <div class="form_input">
+            <label for="email">Ingresa email</label>
+            <input type="email" placeholder="Email" id="email">
+        </div >    
+        <div class="form_input">
+            <label for="Asunto">Asunto
+            <input type="text" placeholder="El asunto de tu mensaje" id="Asunto">
+        </div >    
+    </fieldset>
+    
+        <div class="form_input">
+            <label>Tipo de usuario</label>
+            <select name="type-of-user">
+                <option value="user1"> Seguidor</option>
+                <option value="user2"> Empresa</option>
+                <option value="user3"> Otros</option>
+            </select>
+        </div>
+
+        <div class="form_input">
+            <label>Referente
+                <input list="referente" name="type-of-user">
+            <datalist id="referente" name="type-of-user">
+                <option>Dalto</option>
+                <option value ="Empresa"></option>
+                <option value="Amigo"></option>
+                <option> Otros</option>
+            </datalist>
+        </label>
+        </div>
+   
+
+        <div class="form_input">
+            <label for="mensaje">Mensaje</label>
+            <textarea placeholder="Deja un mensaje" id="mensaje"></textarea>
+        </div>
+        <div class="form_input">
+            <label>
+            <input type="checkbox" class="checkbox"> Acepto <a href="https://github.com/Pata27A" target="_blank"> terminos y condiciones </a>
+        </label>
+        </div>
+            
+       
+    </form>
+
+</body>
+</html>

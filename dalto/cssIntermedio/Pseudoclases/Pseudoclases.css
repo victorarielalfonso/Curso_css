@@ -1,0 +1,41 @@
+h1{
+    color: #48c;
+    font-family: sans-serif;
+    margin: 30px;
+}
+/*Mientras se pasa el mouse por encima*/
+h1:hover{
+    background-color: #ccc;
+    color: #000;
+
+}
+/*Mientras se le da clip*/
+h1:active{
+ background-color: #48c;
+ color: #fff;
+}
+
+/*Selecionar el primer li*/
+li:first-child{
+    color: #f00;
+}
+/*Selecionar el ultimo li*/
+li:last-child{
+    color: #00f;
+}
+/* selecionar elemntos t para salear los elementos li:nth-child(2n)
+li:nth-child(5){
+    color: #0f0;
+}
+*/
+li:nth-child(2n){
+    background-color: #48c;
+}
+.list li{
+    color: #ccc;
+}
+
+div{
+    background-color: #ccc;
+    padding: 30px;
+}

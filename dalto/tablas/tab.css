@@ -1,0 +1,12 @@
+td, th{
+    border: 1px solid #000;
+    text-align: center;
+    padding: 6px;
+    font-family: sans-serif;
+}
+td{
+    color: #666;
+}
+table{
+width: 100px;
+}

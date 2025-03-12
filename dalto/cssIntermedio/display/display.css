@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+}
+div {
+    padding: 20px;
+    background-color: #999;
+}
+p {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    margin: 20px;
+    padding: 20px;
+    display: inline;
+    opacity: 0.6;
+    /*display: block; */
+}
+
+
+.nav_item {
+    display: inline-block;
+    padding: 10px;
+    color: #fff;
+}
+.nav_link {
+    color: #000;
+    text-decoration: none;
+}
+.nav_link.linkcolor:hover {
+    color: #fff;
+    background-color: #48e;  /* Cambia el fondo del enlace al hacer hover */
+}
+.ph:hover {
+    padding: 20px 20px;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+.link--button {
+    border: 1px solid #f00;
+    border-radius: 30%;
+    color: #48e;
+    background-color: #fff;
+    padding: 10px 20px; /* Asegura que haya un área visible para hacer hover */
+}
+.link--button:hover {
+    background-color: #48e; /* Cambia el fondo al hacer hover */
+    color: #fff; /* Cambia el color del texto al pasar el cursor */
+    border-color: #48e; /* Asegura que el borde también cambie */
+}
+.eso{
+    padding: 10px
+}

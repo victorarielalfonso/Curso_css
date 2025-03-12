@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+    background-color: rgb(78, 80, 78);
+}
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    color: #fff;
+    position: relative;
+    border: 1px  solid #0f0;
+    color: #000;
+    font-family: sans-serif;
+    text-align: center;
+
+
+
+}
+.box--blue{
+    background-color: blue;
+    position: absolute;
+    top: 70px;
+    left:126px;
+    z-index: 1;
+   /* top: -30px;
+    left: 30px;
+    border: 1px solid #0F0; */
+}
+.box--3{
+/*    top: -50px;
+    left: 60px; */
+    background-color: #f00;
+}
+.box--one{
+   /* z-index: 1; */
+}
+.contenedor{
+    border: 3px solid #0ff0ed;
+    margin: 30px 100px;
+    position: relative;
+    background-color: #000;
+}
+.box--3{
+left: 30px;
+}

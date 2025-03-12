@@ -86,3 +86,6 @@ body::after {
     z-index: -1;
 }
 
+.otraclase:hover {
+    background-color: #808080 !important;
+}
