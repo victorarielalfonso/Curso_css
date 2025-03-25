@@ -1,0 +1,18 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+div, body{
+    box-sizing: border-box;
+}
+.bloques{
+    display: inline-block;
+    max-width: 150px;
+    max-width: 200px;
+    background-color: #6af;
+    margin: auto;
+    border: 8px solid #fff;
+}
+.flexbox{
+    display: flex;
+}

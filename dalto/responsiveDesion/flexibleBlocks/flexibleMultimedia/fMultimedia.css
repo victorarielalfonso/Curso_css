@@ -1,0 +1,10 @@
+body{
+    margin: 0;
+}
+div, body{
+    box-sizing: b;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}

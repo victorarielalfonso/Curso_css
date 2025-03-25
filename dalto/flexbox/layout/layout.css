@@ -2,18 +2,18 @@ body {
     margin: 0;
     font-family: sans-serif;
     box-sizing: border-box;
-    background-color: #d73;
+    background-color: #f80;
+    color: #fff;
+    overflow: visible; /* Evita que `sticky` se rompa */
 }
 
 .header {
     height: 100vh;
-    background-image: url(../../unidades/ar.jpg); /* Asegúrate de que esta ruta sea correcta */
+    box-sizing: border-box;
+    background-image: url(../../unidades/ar.jpg);
+    display: flex;
     background-size: cover;
     background-position: center;
-    display: flex;
-    justify-content: center; /* Centra el contenido dentro del header */
-    align-items: center; /* Alinea los elementos en el centro verticalmente */
-    position: relative;
 }
 
 h1 {
@@ -33,16 +33,59 @@ h1 {
 .header_item-container {
     position: relative;
     z-index: 2;
+    margin: auto;
     text-align: center;
-    color: white; /* Para que el texto sea visible sobre el fondo */
-    max-width: 80%; /* Limita el ancho del contenedor */
 }
 
-.header_item-container img {
-    width: 540%; /* Ajusta el tamaño de la imagen */
-    max-width: 350px; /* Tamaño máximo */
-    border-radius: 50%; /* Hace que la imagen sea circular */
+.header_img {
+    min-width: 5px;
+    max-width: 40%;
+    border-radius: 50%;
+    margin: 40px;
     border: 3px solid #000;
-    margin: 20px;
+}
 
+/* 🔹 Barra de navegación fija */
+.nav {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky; /* Se queda fija al hacer scroll */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav_ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav_item {
+    list-style: none;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.nav_link {
+    color: #d73;
+    text-decoration: none;
+    padding: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+.nav_link:hover {
+    background-color: rgba(255, 100, 0, 0.3);
+    border-radius: 10px;
+}
+
+/* 🔹 Ajuste del logo en la barra */
+.nav_log {
+    width: 70px;
+    height: auto;
+    border-radius: 10px;
 }
