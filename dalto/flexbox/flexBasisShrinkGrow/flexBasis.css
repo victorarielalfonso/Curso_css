@@ -1,0 +1,42 @@
+body{
+    background-color: #c7c3c3;
+    margin: 0;
+    font-family: sans-serif;
+}
+div, body {
+    box-sizing: border-box;
+}
+.flexbox{
+    display: flex;
+    flex-flow: row wrap;
+    border: 2px solid #000;
+    margin: 20px;
+    height: 100px;
+    align-items: center;
+    
+  /*  justify-content: space-between; los los ultimo al costado y los del medio ordena */
+    justify-content:space-evenly;
+    background-color: #fff;
+
+}
+
+.flex-item{
+    background-color: #911;
+    color: #fff;
+    margin: 0px;
+    text-align: center;
+    font-size: 40px;
+    
+    border: 1px solid #000;
+    width: 100px;
+    direction: rtl;
+
+}
+.flex-item:first-child {
+    background-color: #f77;
+    order: 1;
+}
+.flex-item:last-child {
+    background-color: #000;
+   
+}

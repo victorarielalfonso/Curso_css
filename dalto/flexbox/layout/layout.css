@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background-color: #d73;
+}
+
+.header {
+    height: 100vh;
+    background-image: url(../../unidades/ar.jpg); /* Asegúrate de que esta ruta sea correcta */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center; /* Centra el contenido dentro del header */
+    align-items: center; /* Alinea los elementos en el centro verticalmente */
+    position: relative;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3.6rem;
+    text-wrap: balance;
+}
+
+.header_overlay {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(245, 165, 74, 0.6);
+    position: absolute;
+    z-index: 1;
+}
+
+.header_item-container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white; /* Para que el texto sea visible sobre el fondo */
+    max-width: 80%; /* Limita el ancho del contenedor */
+}
+
+.header_item-container img {
+    width: 540%; /* Ajusta el tamaño de la imagen */
+    max-width: 350px; /* Tamaño máximo */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    border: 3px solid #000;
+    margin: 20px;
+
+}
