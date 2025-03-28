@@ -1,85 +1,65 @@
-document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("csvFile").addEventListener("change", function (event) {
-        // Almacena el archivo seleccionado en una variable global
-        window.selectedFile = event.target.files[0];
-    });
-
-    document.querySelector("button").addEventListener("click", function () {
-        if (window.selectedFile) {
-            procesarCSV(window.selectedFile);
-        } else {
-            alert("Por favor, selecciona un archivo CSV primero.");
-        }
-    });
-});
-
-function procesarCSV(file) {
-    const reader = new FileReader();
-    reader.readAsText(file, "UTF-8");
-
-    reader.onload = function (event) {
-        const csvText = event.target.result;
-        dividirCSV(csvText, file.name);
-    };
-
-    reader.onerror = function () {
-        alert("Error al leer el archivo.");
-    };
-}
-
-function dividirCSV(csvText, fileName) {
-    const lineas = csvText.split("\n").filter(line => line.trim() !== ""); // Evita líneas vacías
-
-    if (lineas.length < 2) {
-        alert("El archivo CSV no tiene suficientes datos.");
+function procesarCSV() {
+    const input = document.getElementById("csvFile");
+    if (!input.files.length) {
+        alert("Por favor, selecciona un archivo CSV.");
         return;
     }
-
-    const encabezado = lineas[0]; // Primera línea como encabezado
-    const registros = lineas.slice(1); // Resto de las líneas (datos)
-
-    const limiteTamañoMB = 1 * 1024 * 1024; // 1 MB en bytes
-    let numArchivo = 1;
-    let i = 0;
-
-    while (i < registros.length) {
-        let chunk = [];
-        let tamañoArchivo = 0;
-
-        while (i < registros.length && tamañoArchivo + new Blob([chunk.join("\n")]).size < limiteTamañoMB) {
-            chunk.push(registros[i]);
-            tamañoArchivo = new Blob([chunk.join("\n")]).size;
-            i++;
-        }
-
-        // Asegurar que la última línea sea "1"
-        while (chunk.length > 0 && !chunk[chunk.length - 1].includes('"1"')) {
-            chunk.pop(); // Eliminar líneas hasta encontrar una que termine en "1"
-        }
-
-        if (chunk.length === 0) {
-            alert("No se encontró ninguna línea que termine en '1'.");
+    
+    const file = input.files[0];
+    const fileName = file.name.replace(/\.csv$/, ""); // Nombre sin extensión
+    const reader = new FileReader();
+    
+    reader.onload = function (e) {
+        const lines = e.target.result.split(/\r?\n/);
+        if (lines.length < 2) {
+            alert("El archivo CSV no tiene suficientes datos.");
             return;
         }
-
-        const contenido = [encabezado, ...chunk].join("\n");
-        const fecha = new Date().toISOString().split("T")[0];
-        const nuevoNombre = `fraccion_${numArchivo}_${fecha}_${fileName}`;
-
-        descargarArchivo(contenido, nuevoNombre);
-        numArchivo++;
-    }
-
-    document.getElementById("resultado").innerHTML = `<p>Se han generado ${numArchivo - 1} archivos.</p>`;
+        
+        const header = lines[0];
+        const records = lines.slice(1);
+        const minSize = 915 * 1024; // 915 KB
+        const maxSize = 1024 * 1000; // Menos de 1MB
+        let currentSize = header.length + 2;
+        let part = [];
+        let fileCount = 1;
+        
+        function savePart(force = false) {
+            if (part.length > 0 && (force || currentSize >= minSize)) {
+                const content = [header, ...part].join("\n");
+                descargarArchivo(content, `${fileName}(${fileCount}).csv`);
+                fileCount++;
+                part = [];
+                currentSize = header.length + 2;
+            }
+        }
+        
+        for (let i = 0; i < records.length; i++) {
+            const line = records[i];
+            const lineSize = new Blob([line]).size;
+            
+            part.push(line);
+            currentSize += lineSize + 1;
+            
+            if (line.trim().endsWith(';"1"')) {
+                savePart();
+            }
+            
+            if (i === records.length - 1) {
+                savePart(true);
+            }
+        }
+    };
+    
+    reader.readAsText(file);
 }
 
-function descargarArchivo(contenido, nombreArchivo) {
+function descargarArchivo(contenido, nombre) {
     const blob = new Blob([contenido], { type: "text/csv" });
-    const enlace = document.createElement("a");
-
-    enlace.href = URL.createObjectURL(blob);
-    enlace.download = nombreArchivo;
-    document.body.appendChild(enlace);
-    enlace.click();
-    document.body.removeChild(enlace);
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = nombre;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
 }
