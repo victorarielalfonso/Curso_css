@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-image: url(/dalto/padding_and_margin/G0017077.JPG);
+    background-image: url(../dalto/padding_and_margin/G0017077.JPG);
     background-size: cover;
     margin: 20px;
     background-color: #f4f4f4;
@@ -20,19 +20,19 @@ body::after {
     background: #000;
     color: #f4f4f4;
     border: 2px solid #fff;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
+    max-width: 490px;
     margin: auto;
-
+    width: 50%;
     
 }
 
 button {
-    margin-top: 20px;
+    margin-top: 29px;
     padding: 10px;
-    font-size: 14px;
+    font-size: 20px;
     cursor: pointer;
     background-color: #e0d318;
     color: #2d2788;
@@ -49,18 +49,26 @@ button:active {
     margin-top: 20px;
 
 }
-
-h1{
-    background-image: url(/consulta/logo.png);
+h1 {
+    background-image: url(../consulta/logo.png);
     background-repeat: no-repeat;
-    background-position: center;
+    background-size: 400px; /* Hace que la imagen cubra todo el h1 */
+    background-position: top center; /* Mueve la imagen más arriba */
+    height: 95px; /* Asegura que haya suficiente espacio para la imagen */
     margin: 0;
-    padding: 35px;
+    padding: 0; /* Elimina el padding para que la imagen no se desplace */
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Asegura visibilidad del texto */
 }
+
 input[type="file"]::-webkit-file-upload-button {
     background-color: #ecde0e; /* Amarillo */
     color: #2d2788; /* Azul */
     border: 2px solid #fff;
+    font-size: 23px;
    
 }
 

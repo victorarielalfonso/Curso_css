@@ -1,0 +1,8 @@
+doby{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #ccc;
+}
+div, doby{
+    box-sizing: border-box;
+}
