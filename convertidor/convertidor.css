@@ -70,12 +70,13 @@ b{
     display:none; 
     position:fixed; 
     top:29%; 
-    left:48%; 
+    left:48.2%; 
     background-color:#4caf50; 
     color:white; 
-    padding:39px 40px; 
+    padding:42px 40px; 
     border-radius:5px; 
     box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    font-size: 25px;
 }
 
 
