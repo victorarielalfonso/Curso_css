@@ -65,6 +65,22 @@ b{
     width: 450px;
     height: 400px;
 } 
+
+#popup{
+    display:none; 
+    position:fixed; 
+    top:29%; 
+    left:48%; 
+    background-color:#4caf50; 
+    color:white; 
+    padding:39px 40px; 
+    border-radius:5px; 
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+
+
+
 textarea{
     margin-left: 350px; /* Mantén el desplazamiento a la derecha */
     width: 400px; /* Ajusta el ancho */
