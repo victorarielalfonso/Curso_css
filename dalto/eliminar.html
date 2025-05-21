@@ -1,48 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
 <head>
-    <title>Ejemplo de JavaScript</title>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <title>Ejemplo con input</title>
+    <style>
+        body {
+            background: #f2f2f2;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 320px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 80%;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .resultado {
+            font-size: 22px;
+            margin-top: 20px;
+            min-height: 28px;
+        }
+
+        .rojo {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
 </head>
+
 <body>
 
+    <div class="card">
+        <h2>Ingresa un valor entre 1 y 5</h2>
+        <input type="text" id="entrada" placeholder="Ej: 1, dos, tres" />
+        <br />
+        <button onclick="procesar()">Mostrar resultado</button>
+
+        <div class="resultado" id="resultado"></div>
+    </div>
+
     <script>
-        
-        let datos = [];
+        function procesar() {
+            let valor = document.getElementById("entrada").value.trim().toLowerCase();
+            let salida = "";
 
-function personas() {
-    let nombre = prompt("Ingrese el nombre:");
-    let dinero = parseInt(prompt("Ingrese el valor de dinero:"));
-    let nuevoDatos = { nombre: nombre, dinero: dinero };
-    datos.push(nuevoDatos);
-    document.write(`Nombre: ${nombre} Dinero: ${dinero}<br>`);
-}
+            switch (valor) {
+                case "1":
+                    salida = "uno";
+                    break;
+                case "2":
+                    salida = "two";
+                    break;
+                case "3":
+                case "tres":
+                    salida = "3";
+                    break;
+                case "4":
+                    salida = "four";
+                    break;
+                case "5":
+                    salida = "five";
+                    break;
+                case "uno":
+                    salida = "1";
+                    break;
+                case "dos":
+                    salida = "2";
+                    break;
+                case "cuatro":
+                    salida = "4";
+                    break;
+                case "cinco":
+                    salida = "5";
+                    break;
+                default:
+                    salida = `No existe lo ingresado que es <span class="rojo">${valor}</span>`;
+            }
 
-for (let i = 0; i < 2; i++) {
-    personas();
-}
-
-function result() {
-    for (let i = 0; i < datos.length; i++) {
-        if (datos[i].dinero >= 20) {
-            document.write(`${datos[i].nombre} puedes comprar una coca cola de 3L. `);
-            document.write("Tu vuelto seria de " + (datos[i].dinero - 20) + "<br>");
-        } else if (datos[i].dinero >= 14 && datos[i].dinero <= 19) {
-            document.write(`${datos[i].nombre} puedes comprar una coca cola de 1.5L `);
-            document.write("Tu vuelto seria de " + (datos[i].dinero - 14) + "<br>");
-        } else if (datos[i].dinero >= 9 && datos[i].dinero < 14) {
-            document.write(`${datos[i].nombre} puedes comprar una coca cola de 500ML `);
-            document.write("Tu vuelto seria de " + (datos[i].dinero - 9) + "<br>");
-        } else {
-            document.write(`${datos[i].nombre} no tienes la cantidad suficiente  <br>`);
+            document.getElementById("resultado").innerHTML = salida;
         }
-    }
-}
-
-result();
-
     </script>
 
 </body>
+
 </html>
-    

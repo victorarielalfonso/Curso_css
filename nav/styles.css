@@ -1,0 +1,196 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set the page background and text colors */
+body {
+
+  font-family: Arial, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #222222;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Style the main content */
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+section h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product {
+  width: 200px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-color: #222222;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.product h3 {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.product p {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.product a {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #ffffff;
+  color: #222222;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.product a:hover {
+  background-color: #dddddd;
+}
+
+/* Style the footer */
+footer {
+  background-color: #222222;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.dark-mode header {
+  background-color: #222222;
+}
+
+.dark-mode .product {
+  background-color: #222222;
+}
+
+.dark-mode .product a {
+  background-color: #ffffff;
+  color: #222222;
+}
+
+/* Popup styles */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.popup p {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/*.popup a {
+display
+padding: 5px 10px;
+background-color: #222222;
+color: #ffffff;
+text-decoration: none;
+font-size: 14px;
+border-radius: 4px;
+}
+*/
+.popup a:hover {
+background-color: #333333;
+}
+
+.popup-close {
+position: absolute;
+top: 10px;
+right: 10px;
+font-size: 18px;
+color: #aaaaaa;
+cursor: pointer;
+}
+
+/* Hover effects */
+.product:hover {
+transform: translateY(-5px);
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+.product {
+width: 100%;
+margin-right: 0;
+}
+}
+
+@media screen and (max-width: 480px) {
+.product {
+padding: 15px;
+}
+
+.popup {
+width: 250px;
+}
+}
