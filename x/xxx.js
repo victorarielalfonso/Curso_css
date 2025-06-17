@@ -10,20 +10,20 @@ function procesar() {
 
     switch (valor) {
         case "1":
-            salida = "Existe";
+            salida = "one";
             break;
         case "2":
-            salida = "Existe";
+            salida = "two";
             break;
         case "3":
         case "tres":
-            salida = "Existe";
+            salida = "three";
             break;
         case "4":
-            salida = "Existe";
+            salida = "four";
             break;
         case "5":
-            salida = "Existe";
+            salida = "five";
             break;
         case "uno":
             salida = "1";
@@ -41,7 +41,8 @@ function procesar() {
             if(valor ===""){
                 salida = '<span class="rojo">No se ha ingresado nada</span>'
             }else{
-                salida = `No existe el<span class="rojo">${valor}</span>`;
+                salida = `No existe <span class="rojo">${valor}</span>`;
+
             }
             
             

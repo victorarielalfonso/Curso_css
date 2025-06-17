@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Asistente de Narrador - Juego del Lobo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="overlay">
+        <h1>Asistente de Narrador</h1>
+
+        <div class="panel">
+            <h2>Agregar Participantes</h2>
+            <input type="text" id="nombre" placeholder="Nombre">
+            <button onclick="agregarJugador()">Agregar</button>
+            <ul id="listaJugadores"></ul>
+            <button onclick="iniciarPartida()">Iniciar Partida</button>
+        </div>
+
+        <div id="acciones" style="display:none;">
+            <div class="panel">
+                <h2>Noche</h2>
+                <label>Lobo ataca:</label>
+                <input type="text" id="loboInput" oninput="autocompletar('loboInput', 'sugerenciasLobo')">
+                <div id="sugerenciasLobo" class="sugerencias"></div>
+
+                <label>Mago salva:</label>
+                <input type="text" id="magoInput" oninput="autocompletar('magoInput', 'sugerenciasMago')">
+                <div id="sugerenciasMago" class="sugerencias"></div>
+
+                <button onclick="resolverNoche()">Resolver Noche</button>
+            </div>
+
+            <div class="panel">
+                <h2>Resultado:</h2>
+                <p id="resultado"></p>
+
+                <div id="cronometro" style="display:none;">
+                    <h3>Debate:</h3>
+                    <p id="tiempo">3:00</p>
+                </div>
+
+                <button id="paladinBtn" onclick="revivir()" disabled>Paladín revive</button>
+            </div>
+
+            <div class="panel">
+                <button onclick="nuevaPartida()">Nueva Partida</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
