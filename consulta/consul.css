@@ -109,8 +109,3 @@ h2 .background-image {
 color: #000;
 text-align: center;
 }
-.butun input:hover {
-    background-color: black;
-    color: white;
-    box-shadow: 0px 0px 4px black;
-}
