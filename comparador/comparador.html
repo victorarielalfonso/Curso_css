@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Comparador de Excel</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link  rel="icon"  href="../consulta/icono.png">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Comparar Descripciones Diferentes</h2>
+
+    <div class="input-group">
+      <label for="file1">Subir archivo Excel del Maestro:</label>
+      <input type="file" id="file1" accept=".xlsx">
+    </div>
+
+    <div class="input-group">
+      <label for="file2">Subir archivo Excel generado por query:</label>
+      <input type="file" id="file2" accept=".xlsx">
+    </div>
+
+    <button onclick="compararArchivos()">Comparar y Descargar Diferencias</button>
+
+    <div class="resultado" id="resultado"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

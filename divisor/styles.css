@@ -34,11 +34,19 @@ button {
     padding: 10px;
     font-size: 20px;
     cursor: pointer;
-    background-color: #e0d318;
-    color: #2d2788;
+    background-color: #e0d318;  /* Amarillo */
+    color: #2d2788;             /* Azul */
     border-radius: 20px;
     border: 2px solid #fff;
-}
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2d2788;  /* Azul */
+    color: #e0d318;             /* Amarillo */
+    border: 2px solid #e0d318;
+  }
+  
 
 button:active {
     background-color: #d1c70f; /* Un amarillo más oscuro para el estado de "active" */
@@ -65,10 +73,29 @@ h1 {
 }
 
 input[type="file"]::-webkit-file-upload-button {
-    background-color: #ecde0e; /* Amarillo */
-    color: #2d2788; /* Azul */
+    background-color: #ecde0e;
+    color: #2d2788;
     border: 2px solid #fff;
-    font-size: 23px;
-   
-}
-
+    font-size: 20px;
+    padding: 10px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hover del input file */
+  input[type="file"]::-webkit-file-upload-button:hover {
+    background-color: #2d2788;
+    color: #ecde0e;
+    border: 2px solid #ecde0e;
+  }
+  
+  /* Evitar que el input agrande el botón */
+  input[type="file"] {
+    font-size: 0; /* Oculta texto adicional como 'Ningún archivo seleccionado' */
+    border: none;
+    background: none;
+    width: auto;
+  }
+  
+  
